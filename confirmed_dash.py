@@ -236,7 +236,7 @@ def top_plot(Date,type,positions):
 @app.callback(Output(component_id='line-trends',component_property='figure'),
             [Input(component_id='type-dropdown',component_property='value'),
             Input(component_id='country-dropdown',component_property='value')])
-            ˜˜
+
 def top_plot(type,country_list):
 
     if type == 'individual_date':
