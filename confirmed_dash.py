@@ -66,6 +66,8 @@ for i in range(2,y1[1],1):
 confirmed_2_long=confirmed_2_long.append(confirmed_2_listdic)
 confirmed_2_long['Date']=pd.to_datetime(confirmed_2_long['Date']).dt.strftime("%Y-%m-%d")
 
+date_value = date1[-1]
+
 
 plots=  ['equirectangular', 'mercator', 'orthographic', 'natural earth', 'kavrayskiy7', 'miller', 'robinson', 'eckert4',
             'azimuthal equal area', 'azimuthal equidistant', 'conic equal area', 'conic conformal', 'conic equidistant',
@@ -129,7 +131,7 @@ app.layout=html.Div([
     dcc.Dropdown(
     id='date-dropdown',
     options=[{'label':str(i),'value':i} for i in confirmed_1_long['Date'].unique()],
-    value=date1[-1]
+    value=date_value
                 )
     ],style={'width':'10%','display':'inline-block'}),
     html.Div([
