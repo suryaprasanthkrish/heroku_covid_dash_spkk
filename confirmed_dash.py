@@ -129,7 +129,7 @@ app.layout=html.Div([
     dcc.Dropdown(
     id='date-dropdown',
     options=[{'label':str(i),'value':i} for i in confirmed_1_long['Date'].unique()],
-    value=date1[-1]
+    value=date1[0]
                 )
     ],style={'width':'10%','display':'inline-block'}),
     html.Div([
